@@ -6,11 +6,12 @@ from django.db import models
 class Articulo(models.Model):
 #	 class Meta:
 	cod_articulo = models.AutoField(primary_key=True) #CharField(max_length=100)
-	categoria = models.IntegerField()
-	f_venc = models.DateTimeField()
-	f_ingreso = models.DateTimeField()
-	time_stock = models.IntegerField()
-	count_stock = models.IntegerField()
+	categoria = models.IntegerField(default=0)
+#	f_venc = models.DateTimeField(auto_now_add=True)
+	f_venc = models.DateTimeField(default=timezone.now)
+	f_ingreso = models.DateTimeField(default=timezone.now)
+	time_stock = models.IntegerField(default=0)
+	count_stock = models.IntegerField(default=0)
 	nombre_articulo = models.CharField(max_length=200)
  #	 id_provedor = models.CharField(max_length=100)
 """
