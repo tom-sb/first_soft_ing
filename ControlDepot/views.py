@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
-def ControlDepot_list(request):
-    return render(request, 'ControlDepot/ControlDepot_list.html', {})
+def ControlDepot(request):
+    return render(request, 'ControlDepot/ControlDepot.html', {})
 # Create your views here.
